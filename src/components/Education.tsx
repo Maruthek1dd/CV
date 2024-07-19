@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation, Variants } from "framer-motion";
 
-// Define el tipo del parámetro 'delay'
 const derM = (delay: number): Variants => ({
   hidden: { x: 200, opacity: 0 },
   visible: {
@@ -51,27 +50,31 @@ export const Education = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      // Define el umbral de activación de la animación
       const trigger1 = scrollY + windowHeight * 0.6;
       const trigger2 = scrollY + windowHeight * 0.6;
       const trigger3 = scrollY + windowHeight * 0.7;
       const trigger4 = scrollY + windowHeight * 0.7;
-      const titleTrigger = scrollY + windowHeight * 0.5; // 50% de la altura de la ventana visible
+      const titleTrigger = scrollY + windowHeight * 0.5;
 
-      // Aplica las animaciones cuando los elementos alcanzan el umbral
-      if (document.getElementById("title")?.offsetTop < titleTrigger) {
+      const titleElement = document.getElementById("title");
+      const item1Element = document.getElementById("item1");
+      const item2Element = document.getElementById("item2");
+      const item3Element = document.getElementById("item3");
+      const item4Element = document.getElementById("item4");
+
+      if (titleElement?.offsetTop < titleTrigger) {
         titleControls.start("visible");
       }
-      if (document.getElementById("item1")?.offsetTop < trigger1) {
+      if (item1Element?.offsetTop < trigger1) {
         controls1.start("visible");
       }
-      if (document.getElementById("item2")?.offsetTop < trigger2) {
+      if (item2Element?.offsetTop < trigger2) {
         controls2.start("visible");
       }
-      if (document.getElementById("item3")?.offsetTop < trigger3) {
+      if (item3Element?.offsetTop < trigger3) {
         controls3.start("visible");
       }
-      if (document.getElementById("item4")?.offsetTop < trigger4) {
+      if (item4Element?.offsetTop < trigger4) {
         controls4.start("visible");
       }
     };

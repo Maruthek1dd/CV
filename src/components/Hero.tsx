@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const container = (delay) => ({
+const container = (delay: number): Variants => ({
   hidden: { x: -100, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.5, delay: 0.2 },
+    transition: { duration: 0.5, delay: delay },
   },
 });
 
@@ -23,7 +23,7 @@ const Hero = () => {
             Hi! I'm Leo
           </motion.h2>
           <motion.h3
-            variants={container(0)}
+            variants={container(0.1)}
             initial="hidden"
             animate="visible"
             className="text-2xl"
@@ -32,11 +32,15 @@ const Hero = () => {
           </motion.h3>
         </div>
         <div className="bg-red-700 h-52 w-52">
-          <img src="" alt="Profile" className="h-full w-full object-cover" />
+          <img
+            src="/path/to/your/profile-image.jpg" // Agrega la URL de la imagen
+            alt="Profile"
+            className="h-full w-full object-cover"
+          />
         </div>
       </div>
       <motion.p
-        variants={container(0)}
+        variants={container(0.2)}
         initial="hidden"
         animate="visible"
         className="text-sm leading-tight mt-36"
@@ -45,23 +49,23 @@ const Hero = () => {
         experiencia en desarrollo web y análisis de datos.
       </motion.p>
       <motion.div
-        variants={container(0)}
+        variants={container(0.3)}
         initial="hidden"
         animate="visible"
         className="mt-6 space-x-4"
       >
         <a
-          href="/path/to/your/CV.pdf"
+          href="/path/to/your/CV.pdf" // Agrega la URL del CV
           download
-          className="px-4 py-2 border border-cyan-800 text-cyan-800 rounded-lg  "
+          className="px-4 py-2 border border-cyan-800 text-cyan-800 rounded-lg"
         >
           Descargar CV
         </a>
         <a
-          href="mailto:youremail@example.com"
-          className="px-4 py-2  text-neutral-800 rounded-lg bg-gray-300 hover:bg-gray-300"
+          href="mailto:youremail@example.com" // Agrega tu dirección de correo
+          className="px-4 py-2 text-neutral-800 rounded-lg bg-gray-300 hover:bg-gray-400"
         >
-          Contactame!
+          Contáctame!
         </a>
       </motion.div>
     </div>
