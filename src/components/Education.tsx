@@ -50,11 +50,11 @@ export const Education = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
 
+      const titleTrigger = scrollY + windowHeight * 0.5;
       const trigger1 = scrollY + windowHeight * 0.6;
       const trigger2 = scrollY + windowHeight * 0.6;
       const trigger3 = scrollY + windowHeight * 0.7;
       const trigger4 = scrollY + windowHeight * 0.7;
-      const titleTrigger = scrollY + windowHeight * 0.5;
 
       const titleElement = document.getElementById("title");
       const item1Element = document.getElementById("item1");
@@ -62,19 +62,19 @@ export const Education = () => {
       const item3Element = document.getElementById("item3");
       const item4Element = document.getElementById("item4");
 
-      if (titleElement?.offsetTop < titleTrigger) {
+      if (titleElement && titleElement.offsetTop < titleTrigger) {
         titleControls.start("visible");
       }
-      if (item1Element?.offsetTop < trigger1) {
+      if (item1Element && item1Element.offsetTop < trigger1) {
         controls1.start("visible");
       }
-      if (item2Element?.offsetTop < trigger2) {
+      if (item2Element && item2Element.offsetTop < trigger2) {
         controls2.start("visible");
       }
-      if (item3Element?.offsetTop < trigger3) {
+      if (item3Element && item3Element.offsetTop < trigger3) {
         controls3.start("visible");
       }
-      if (item4Element?.offsetTop < trigger4) {
+      if (item4Element && item4Element.offsetTop < trigger4) {
         controls4.start("visible");
       }
     };

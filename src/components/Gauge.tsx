@@ -1,6 +1,16 @@
 import React from "react";
 
-export const Gauge = ({ percent = 0, radius, ...rest }) => {
+interface GaugeProps {
+  percent?: number;
+  radius: number;
+  [key: string]: any;
+}
+
+export const Gauge: React.FC<GaugeProps> = ({
+  percent = 0,
+  radius,
+  ...rest
+}) => {
   const strokeWidth = radius * 0.2;
   const innerRadius = radius - strokeWidth;
   const circumference = innerRadius * 2 * Math.PI;
@@ -40,14 +50,12 @@ export const Gauge = ({ percent = 0, radius, ...rest }) => {
         cy={radius}
         fill="transparent"
         r={innerRadius}
-        stroke="#009688" // Aquí puedes cambiar el color del medidor de porcentaje si lo deseas
+        stroke="#009688" // Color del medidor de porcentaje
         strokeDasharray={dashArray}
         strokeDashoffset={offset}
         strokeLinecap="round"
         strokeWidth={strokeWidth}
-        style={{
-          transition: "stroke-dashoffset 0.3s",
-        }}
+        style={{ transition: "stroke-dashoffset 0.3s" }}
         transform={transform}
       />
     </svg>
