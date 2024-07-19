@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { motion, useAnimation, Variants } from "framer-motion";
 
 const derM = (delay: number): Variants => ({
