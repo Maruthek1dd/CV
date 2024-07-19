@@ -1,4 +1,5 @@
 import { motion, useAnimation, Variants } from "framer-motion";
+import { useEffect } from "react";
 
 const derM = (delay: number): Variants => ({
   hidden: { x: 200, opacity: 0 },
