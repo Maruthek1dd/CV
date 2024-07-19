@@ -1,7 +1,8 @@
-import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
+import { motion, useAnimation, Variants } from "framer-motion";
 
-const derM = (delay) => ({
+// Define el tipo del parámetro 'delay'
+const derM = (delay: number): Variants => ({
   hidden: { x: 200, opacity: 0 },
   visible: {
     x: 0,
@@ -10,7 +11,7 @@ const derM = (delay) => ({
   },
 });
 
-const izqM = (delay) => ({
+const izqM = (delay: number): Variants => ({
   hidden: { x: -100, opacity: 0 },
   visible: {
     x: 0,
@@ -19,7 +20,7 @@ const izqM = (delay) => ({
   },
 });
 
-const titleVariants = (delay) => ({
+const titleVariants = (delay: number): Variants => ({
   hidden: { opacity: 0, scale: 0.5 },
   visible: {
     opacity: 1,
@@ -58,19 +59,19 @@ export const Education = () => {
       const titleTrigger = scrollY + windowHeight * 0.5; // 50% de la altura de la ventana visible
 
       // Aplica las animaciones cuando los elementos alcanzan el umbral
-      if (document.getElementById("title").offsetTop < titleTrigger) {
+      if (document.getElementById("title")?.offsetTop < titleTrigger) {
         titleControls.start("visible");
       }
-      if (document.getElementById("item1").offsetTop < trigger1) {
+      if (document.getElementById("item1")?.offsetTop < trigger1) {
         controls1.start("visible");
       }
-      if (document.getElementById("item2").offsetTop < trigger2) {
+      if (document.getElementById("item2")?.offsetTop < trigger2) {
         controls2.start("visible");
       }
-      if (document.getElementById("item3").offsetTop < trigger3) {
+      if (document.getElementById("item3")?.offsetTop < trigger3) {
         controls3.start("visible");
       }
-      if (document.getElementById("item4").offsetTop < trigger4) {
+      if (document.getElementById("item4")?.offsetTop < trigger4) {
         controls4.start("visible");
       }
     };
@@ -145,3 +146,5 @@ export const Education = () => {
     </div>
   );
 };
+
+export default Education;

@@ -2,9 +2,10 @@ import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { FaPython, FaNodeJs, FaDocker } from "react-icons/fa";
 import { SiFastapi, SiPandas } from "react-icons/si";
 import { DiMysql } from "react-icons/di";
-import { animate, motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 
-const iconV = (duration) => ({
+// Define el tipo del parámetro 'duration'
+const iconV = (duration: number): Variants => ({
   initial: { y: -5 },
   animate: {
     y: [5, -5],
@@ -93,4 +94,5 @@ export const Technologies = () => {
     </div>
   );
 };
+
 export default Technologies;
