@@ -1,14 +1,13 @@
-import React from "react"; // Aunque es opcional en React 18+, puede ayudar a evitar problemas.
+import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import { Education } from "./components/Education";
-import { Technologies } from "./components/Technologies";
+import Education from "./components/Education";
+import Technologies from "./components/Technologies";
 import { Proyect } from "./components/Proyect";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
-
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-800 selection:text-cyan-900">
