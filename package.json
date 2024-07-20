@@ -2,7 +2,7 @@
   "name": "cv-react",
   "version": "1.0.0",
   "description": "A personal CV website built with React and Vite.",
-  "main": "src/main.tsx", 
+  "main": "src/main.tsx",
   "scripts": {
     "dev": "vite",
     "build": "cross-env NODE_ENV=production vite build --mode production",
@@ -38,6 +38,5 @@
   "bugs": {
     "url": "https://github.com/Maruthek1dd/CV/issues"
   },
-  "homepage": "https://github.com/Maruthek1dd/CV#readme",
-  "type": "module"
+  "homepage": "https://github.com/Maruthek1dd/CV#readme"
 }
