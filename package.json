@@ -1,8 +1,14 @@
 {
   "name": "cv-react",
   "version": "1.0.0",
-  "description": "cv-marusich",
-  "main": "postcss.config.js",
+  "description": "A personal CV website built with React and Vite.",
+  "main": "src/main.tsx", 
+  "scripts": {
+    "dev": "vite",
+    "build": "cross-env NODE_ENV=production vite build --mode production",
+    "serve": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@vitejs/plugin-react-swc": "^3.7.0",
     "autoprefixer": "^10.4.19",
@@ -23,20 +29,15 @@
     "cross-env": "^7.0.3",
     "typescript": "^5.5.3"
   },
-  "scripts": {
-    "dev": "vite",
-    "build": "cross-env NODE_ENV=production vite build --mode production",
-    "serve": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Maruthek1dd/CV.git"
   },
-  "author": "",
+  "author": "Maruthek1dd",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Maruthek1dd/CV/issues"
   },
-  "homepage": "https://github.com/Maruthek1dd/CV#readme"
+  "homepage": "https://github.com/Maruthek1dd/CV#readme",
+  "type": "module"
 }
