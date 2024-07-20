@@ -38,5 +38,6 @@
   "bugs": {
     "url": "https://github.com/Maruthek1dd/CV/issues"
   },
-  "homepage": "https://github.com/Maruthek1dd/CV#readme"
+  "homepage": "https://github.com/Maruthek1dd/CV#readme",
+  "type": "module"
 }
