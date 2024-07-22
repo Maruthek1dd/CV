@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A personal CV website built with React and Vite.",
   "main": "src/main.tsx",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "cross-env NODE_ENV=production vite build --mode production",
